@@ -73,9 +73,9 @@ class _DestiniBodyState extends State<DestiniBody> {
               child: MaterialButton(
                 onPressed: () {},
                 color: Colors.blue,
-                child: const Text(
-                  'option 1',
-                  style: TextStyle(fontSize: 25.0, color: Colors.red),
+                child: Text(
+                  stry.getOpt1(0),
+                  style: const TextStyle(fontSize: 20.0, color: Colors.red),
                 ),
               ),
             ),
@@ -87,9 +87,9 @@ class _DestiniBodyState extends State<DestiniBody> {
               child: MaterialButton(
                 onPressed: () {},
                 color: Colors.green,
-                child: const Text(
-                  'option 2',
-                  style: TextStyle(fontSize: 25.0, color: Colors.yellow),
+                child: Text(
+                  stry.getOpt2(1),
+                  style: const TextStyle(fontSize: 20.0, color: Colors.yellow),
                 ),
               ),
             )

@@ -36,4 +36,12 @@ class StoryBrain {
   String getStory(int num) {
     return _storyData[num].storyLine;
   }
+
+  String getOpt1(int num) {
+    return _storyData[num].opt1;
+  }
+
+  String getOpt2(int num) {
+    return _storyData[num].opt2;
+  }
 }
