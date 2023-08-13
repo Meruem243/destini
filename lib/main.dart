@@ -58,7 +58,7 @@ class _DestiniBodyState extends State<DestiniBody> {
               flex: 6,
               child: Center(
                 child: Text(
-                  stry.getStory(0),
+                  stry.getStory(stry.storyNumber),
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: Colors.black,
@@ -72,12 +72,15 @@ class _DestiniBodyState extends State<DestiniBody> {
               flex: 1,
               child: MaterialButton(
                 onPressed: () {
-                  stry.nextStory(1);
-                  debugPrint('choice 1 pressed ');
+                  setState(() {
+                    stry.nextStory(1);
+                    debugPrint('choice 1 pressed ');
+                    debugPrint('storyNumber = ${stry.storyNumber} ');
+                  });
                 },
                 color: Colors.blue,
                 child: Text(
-                  stry.getOpt1(0),
+                  stry.getOpt1(stry.storyNumber),
                   style: const TextStyle(fontSize: 20.0, color: Colors.red),
                 ),
               ),
@@ -89,12 +92,15 @@ class _DestiniBodyState extends State<DestiniBody> {
               flex: 1,
               child: MaterialButton(
                 onPressed: () {
-                  stry.nextStory(2);
-                  debugPrint('choice 2 pressed ');
+                  setState(() {
+                    stry.nextStory(2);
+                    debugPrint('choice 2 pressed ');
+                    debugPrint('storyNumber = ${stry.storyNumber} ');
+                  });
                 },
                 color: Colors.green,
                 child: Text(
-                  stry.getOpt2(1),
+                  stry.getOpt2(stry.storyNumber),
                   style: const TextStyle(fontSize: 20.0, color: Colors.yellow),
                 ),
               ),
