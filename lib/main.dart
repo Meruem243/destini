@@ -39,6 +39,12 @@ class _DestiniBodyState extends State<DestiniBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/background.png"),
+          fit: BoxFit.cover,
+        ),
+      ),
       padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
       constraints: const BoxConstraints.expand(),
       child: SafeArea(
