@@ -44,4 +44,6 @@ class StoryBrain {
   String getOpt2(int num) {
     return _storyData[num].opt2;
   }
+
+  void nextStory(int storyNum) {}
 }

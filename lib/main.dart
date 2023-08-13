@@ -71,7 +71,10 @@ class _DestiniBodyState extends State<DestiniBody> {
             Expanded(
               flex: 1,
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  stry.nextStory(1);
+                  debugPrint('choice 1 pressed ');
+                },
                 color: Colors.blue,
                 child: Text(
                   stry.getOpt1(0),
@@ -85,7 +88,10 @@ class _DestiniBodyState extends State<DestiniBody> {
             Expanded(
               flex: 1,
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  stry.nextStory(2);
+                  debugPrint('choice 2 pressed ');
+                },
                 color: Colors.green,
                 child: Text(
                   stry.getOpt2(1),
