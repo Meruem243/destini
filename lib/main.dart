@@ -1,3 +1,4 @@
+import 'package:destini/story_brain.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,6 +37,8 @@ class DestiniBody extends StatefulWidget {
 }
 
 class _DestiniBodyState extends State<DestiniBody> {
+  StoryBrain stry = StoryBrain();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -51,10 +54,18 @@ class _DestiniBodyState extends State<DestiniBody> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            const Expanded(
+            Expanded(
               flex: 6,
               child: Center(
-                child: Text('Story will show here'),
+                child: Text(
+                  stry.getStory(0),
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25.0,
+                  ),
+                ),
               ),
             ),
             Expanded(
