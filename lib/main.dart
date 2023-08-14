@@ -7,7 +7,6 @@ void main() {
 
 class Destini extends StatelessWidget {
   const Destini({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
