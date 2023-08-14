@@ -88,16 +88,20 @@ class _DestiniBodyState extends State<DestiniBody> {
             ),
             Expanded(
               flex: 1,
-              child: MaterialButton(
-                onPressed: () {
-                  setState(() {
-                    stry.nextStory(2);
-                  });
-                },
-                color: Colors.green,
-                child: Text(
-                  stry.getOpt2(),
-                  style: const TextStyle(fontSize: 20.0, color: Colors.yellow),
+              child: Visibility(
+                visible: stry.buttonShouldBeVisible(),
+                child: MaterialButton(
+                  onPressed: () {
+                    setState(() {
+                      stry.nextStory(2);
+                    });
+                  },
+                  color: Colors.green,
+                  child: Text(
+                    stry.getOpt2(),
+                    style:
+                        const TextStyle(fontSize: 20.0, color: Colors.yellow),
+                  ),
                 ),
               ),
             )

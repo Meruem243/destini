@@ -33,6 +33,8 @@ class StoryBrain {
         opt2: ''),
   ];
 
+  int _storyNumber = 0;
+
   String getStory() {
     return _storyData[_storyNumber].storyLine;
   }
@@ -44,8 +46,6 @@ class StoryBrain {
   String getOpt2() {
     return _storyData[_storyNumber].opt2;
   }
-
-  int _storyNumber = 0;
 
   void nextStory(int optNumSelected) {
     if (_storyNumber == 0) {
@@ -68,6 +68,14 @@ class StoryBrain {
       }
     } else if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
       _storyNumber = 0;
+    }
+  }
+
+  bool buttonShouldBeVisible() {
+    if (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2) {
+      return true;
+    } else {
+      return false;
     }
   }
 }
